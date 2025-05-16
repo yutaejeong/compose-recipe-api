@@ -1,6 +1,9 @@
 package me.taejeong.compose.recipe.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Size;
 
 import java.time.Instant;
@@ -9,7 +12,6 @@ import java.time.Instant;
 @Table(name = "cgv_schedule_histories")
 public class CgvScheduleHistory {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "schedule_id", nullable = false)
     private Integer id;
 
